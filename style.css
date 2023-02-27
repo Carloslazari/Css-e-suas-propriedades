@@ -1,0 +1,290 @@
+*{
+    margin: 0;
+    padding: 0;
+    background-color: #E6E6FA;
+}
+#navbar {
+    width: 20%;
+    border-bottom: 1px solid #4682B4;
+    }
+
+    #navbar li{
+        border-top: 1px solid 	#4682B4;
+        list-style: none;
+    }
+
+    #navbar a {
+        
+        display: block;
+        padding: 10px 30px;
+        text-decoration: none;
+        cursor: pointer;
+        font-size: 18px;
+    }
+
+.nav{
+    border-bottom: 1px solid 	#4682B4;
+    border-right: 1px solid 	#4682B4;
+    
+}
+
+section{
+    margin-top: 40px;
+}
+
+a{
+    color: 	#4682B4;
+    
+}
+
+.btn{
+    color:	#4682B4;
+    text-decoration: none;
+}
+
+
+#main-doc{
+  margin: 0 auto;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+ 
+}
+
+
+.main-section{
+    display: flex;
+    margin-bottom: 5px;
+    align-content: flex-start;
+    flex-direction: column;
+    padding: 20px;
+    
+}
+
+section {
+    display: flex;
+    align-content: flex-end;
+    margin-top: 40px;
+       
+}
+
+
+header{
+    margin: 10px;
+    text-align: left;
+    font-weight: 500;
+    padding-bottom: 20px;
+}
+
+
+
+@media only screen and (min-width: 815px){
+    
+    body{
+        flex-direction: row;
+    }
+
+    #navbar {
+        width: 300px;
+        height: 100%;
+        position: fixed;
+        resize: horizontal;
+       
+
+    }
+
+    #main-doc{ 
+        margin: 0 20px;
+        margin-left:350px;
+
+    }
+}
+/* formatação do Site */
+
+h1{
+    font-size: 26px;
+    
+}
+
+h2{
+    font-size: 30px;
+}
+
+.paragrafo-importante{
+    font-size: 20px;
+    font-family:Arial, Helvetica, sans-serif ;
+}
+
+.paragrafo{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 17px;
+    margin-top: 10px;
+    justify-content:flex-end;
+}
+
+.notepad{
+    font-size: 15px;
+    font-style: italic;
+    background-color: #FFF;
+}
+
+
+#Introdução, p {
+    padding-bottom: 15px;
+    
+
+}
+
+.nav {
+    padding-top: none;
+}
+
+.li-text {
+    padding-top: 15px;
+    font-size: 17px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 15px;
+}
+
+.li-text2{
+    font-size: 19px;
+    padding-top: 20px ;
+    margin-bottom: 15px;
+}
+
+hr{
+    padding: 1px;
+    background-color: 	#4682B4;
+}
+
+/* DIVS */
+div{
+    display: block;
+}
+
+.para_cego_ver{
+    border: 1px solid rgba(0, 0, 0, .1);
+    background: #fff;
+    padding: 20px 30px 10px;
+    border-radius: 13px;
+    box-shadow: 0 3px 6px #00000005;
+    font-size: 14px;
+    margin-top: 25px;
+    position: relative;
+}
+
+figcaption{
+    text-align: center;
+    margin-bottom: 70px;
+}
+
+code{
+    background-color: #DCDCDC;
+}
+
+.li_sintaxe{
+    margin-left: 100px;
+    margin-bottom: 15px;
+    font-size: 20px;
+    
+}
+.conclusao{
+    padding-bottom: 20px ;
+}
+
+footer{
+    background-color: 	#F8F8FF;
+    border-top: 3px solid #87CEEB;
+    padding: 45px;
+    margin-right: -22px;
+    text-align: center;
+
+}
+.p-footer{
+    font-size: 18px;
+    background-color: #F8F8FF;
+}
+#a-footer{
+    text-decoration: none;
+    color:	#4682B4 ;
+    background-color: 	#F8F8FF;
+
+}
+
+.container{
+    background-color: 	#4682B4;
+    width: 900px;
+    height: 100px;
+    margin-left: 100px;
+    
+}
+
+.comand_line{
+    
+        border: 1px solid rgba(0, 0, 0, .9);
+        background: #263238;
+        padding: 20px 30px 10px;
+        border-radius: 13px;
+        box-shadow: 0 3px 6px #00000005;
+        font-size: 14px;
+        margin-top: 25px;
+        position: relative;
+        margin-bottom: 20px;
+        margin-top: 70px;
+        
+        
+    }
+.comand_line{
+    color:white;
+    background-color: #263238;
+    
+    
+
+}
+
+.list{
+    background-color: #263238;
+    font-weight: bold;
+    font-size: 16px;
+    font-family: monospace ;
+    margin-left: 30px;
+    
+    
+    
+}
+
+.ol_comandline{
+    background-color: #263238;
+}
+.orange{
+    background-color:#263238;
+    color: #F4A460;
+}   
+.red{
+    background-color: #263238;
+    color: #FF7F50 ;
+}
+
+.green{
+    background-color: #263238;
+    color: greenyellow ;
+}
+
+.img{
+    display: flex;
+    justify-content: center;
+}
+
+.gif{
+    display: flex;
+    height: 600px;
+}
+
+

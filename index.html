@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"  href="style.css" />
+    <title>CSS e suas propriedades</title>
+</head>
+
+<body>
+
+
+    <ul id="navbar"><li class="nav"><header><h1>CSS e suas principais funções (Cascading Style Sheets)</h1></header></li>
+      
+      <li class="nav"><a class="nav-link" href="#Introdução">Introdução</a></li>
+      <li class="nav"><a class="nav-link" href="#funciona_css">Como funciona o CSS</a></li>
+      <li class="nav"><a class="nav-link" href="#box_model">Box model</a></li>
+      <li class="nav"><a class="nav-link" href="#sintaxe">Sintaxe de uma regra</a></li>
+      <li class="nav"><a class="nav-link" href="#exemplo">Exemplo pratico</a></li>
+      <li class="nav"><a class="nav-link" href="#link">Link</a></li>
+      
+    </ul>
+
+    
+
+
+<main id="main-doc">
+
+  <!--INTRODUÇÃO-->
+
+<section class="main-section" id="Introdução">
+
+  <header><h2>Introdução</h2></header>
+
+    <p class="paragrafo-importante"><b><em>CSS (Cascading Style Sheets)</b> é uma linguagem de criação de estilos, que quando combinados determinam qual será a aparência de uma página web. Enquanto o <b>HTML cuida da estrutura contida</b> em uma página, <b>é o CSS quem diz ao navegador com o que cada parte da página deve se parecer</b>.</em></p>
+    
+    <hr>
+
+    <li class="li-text"><a class="btn" href="#funciona_css"> Como o Css funciona?</a></li>
+
+    <li class="li-text"><a class="btn" href="#box_model"> Box model</a></li>
+    
+    <li class="li-text"><a class="btn" href="#sintaxe"> Sintaxe de uma regra</a></li>
+
+    <li class="li-text"><a class="btn" href="#exemplo">Exemplo prático</a></li>
+
+    <li class="li-text"><a class="btn" href="#link">Link</a></li>
+
+    <hr>
+    
+    <p class="paragrafo">Usamos a linguagem CSS para moldar a aparência dos elementos em uma página web através de regras.</p>
+
+    <p class="paragrafo"> Por exemplo, <b>com CSS</b> podemos modificar os parágrafos p aumentando a sua fonte e peso adicionando negrito, os títulos h1 para que tenham a fonte Roboto Slab, mover uma parte da página para baixo de outra, entre muitos exemplos.
+      
+      <p class="paragrafo">Todas essas características visuais dos elementos são representadas por propriedades, de forma que <b>aprender CSS consiste em três etapas:</b></p>
+
+</section>
+
+<!-- COMO FUNCIONA O CSS-->
+
+<section class="main-section" id="funciona_css">
+
+  <header><h2>Css como funciona?</h2></header>
+
+    <p class="paragrafo">Cada elemento em uma página reside em uma caixa invisível.</p>
+
+    <p class="paragrafo">No <b>Slide 1</b> vemos os elementos fora e dentro de suas respectivas caixas.</p>
+
+    <img src="#" alt="#">
+
+    
+    <div class="para_cego_ver">
+    <p class="notepad"> #PraCegoVer - Transcrição dos SlidesPágina HTML contando a história de Chapeuzinho Vermelho</p>
+    <p class="notepad">o título Chapeuzinho Vermelho aparece dentro da caixa h1</p>
+    <p class="notepad"> O primeiro parágrafo, abaixo do título, aparece na caixa p</p>
+    <p class="notepad"> O texto abaixo do parágrafo aparece dentro da caixa blockquote</p>
+  </div>
+
+    <p class="paragrafo"><b>Slide 1.</b> Elementos fora e dentro da caixa</p>
+
+</section>
+
+<hr>
+
+<!--BOX MODEL-->
+
+<section class="main-section" id="box_model">
+
+  <header><h2>Box model</h2></header>
+
+      <p class="paragrafo">Essa característica dos elementos é chamada Box Model e é uma das chaves para <b>entender como o CSS funciona.</b></p>
+
+      <p class="paragrafo">As caixas que envolvem os elementos possuem margem, borda, preenchimento e conteúdo. <b>O CSS nos permite criar regras que determinam como a caixa individual de cada elemento será apresentada.</b></p>
+
+      <p class="paragrafo"> A página mesmo é uma grande caixa para o CSS, que envolve todo o conteúdo visível na página como vemos na <b>Figura 1.</b><p>
+
+                                                                                    <!--IMAGEM-->
+
+<div class="img">
+
+        <img src="https://www.devmedia.com.br/arquivos/Artigos/40682/fig1.png" alt="#">
+
+      </div>
+
+                                                                                <!--FIGCAPTION-->
+
+        <figcaption><b>Figura 1.</b> Caixa do elemento HTML selecionada</figcaption>
+
+        <p class="paragrafo">Para ver a caixa de cada elemento como nos exemplos acima e também as propriedades de cada um podemos usar as ferramentas de desenvolvimento do navegador (DevTools). No Chrome as ferramentas do desenvolvedor podem ser acessadas apertando a tecla <b>F12.</b></p>
+
+        <p class="paragrafo">Na <b>Animação 1</b> abaixo temos uma visão geral do console.</p>
+
+<section>
+
+  <figure class="gif">
+
+        <img src="https://www.devmedia.com.br/arquivos/Artigos/40682/1.gif" alt="#">
+
+  </figure>       
+
+</section>
+
+        <figcaption><b>Animação 1.</b> Visão geral do DevTools</figcaption>
+
+        <p class="paragrafo">O console é dividido em três grandes seções. A primeira mostra a estrutura da página conforme ela foi processada pelo navegador. A segunda exibe as propriedades de um elemento selecionado na primeira seção. Para selecionar um elemento basta posicionar o mouse sobre ele. A terceira seção apresenta a caixa do elemento e as propriedades dele.</p>
+
+</section>
+
+<hr>
+
+
+<!--SINTAXE DE UMA REGRA-->
+
+<section class="main-section" id="sintaxe">
+
+  <header><h2>Sintaxe de uma regra</h2></header>
+
+      <p class="paragrafo"><b>O trabalho do CSS é associar regras aos elementos em uma página.</b></p>
+
+      <p class="paragrafo">Uma regra CSS é composta de duas partes:</p>
+
+      <ol>
+
+        <li class="li_sintaxe">Seletor</li>
+
+        <li class="li_sintaxe">Declaração</li>
+
+      </ol>
+
+      <p class="paragrafo">Seletor é a parte da regra que informa a qual ou quais elementos ela deve ser aplicada.</p> 
+
+      <p class="paragrafo">Declaração é a parte da regra que informa como os elementos referenciados pelo seletor devem ser modificados.</p>
+
+      <p class="paragrafo">As declarações são compostas por pares de chave e valor separados por dois pontos <code>:</code>.</p> 
+
+      <p class="paragrafo">Por exemplo, na regra apresentada no <b>Código 1</b>  <code>p</code> é o seletor e todo o conteúdo entre chaves é a declaração.</p> 
+      
+      <div class="comand_line">
+
+        <ol class="ol_comandline">
+
+          <li class="list"> p { </li>
+
+          <li class="list"> font-family: Arial; </li>
+
+          <li class="list"> } </li>
+
+        </ol>
+
+    </div>
+
+     <p class="paragrafo">Essa regra informa para o navegador que todos os elementos <code>p</code> encontrados na página devem ter a fonte <code>Arial</code>.
+
+      <p class="paragrafo">Uma declaração pode conter diversas propriedades separadas por ponto e vírgula, conforme exemplificado no <b>Código 2</b>. As propriedades informam quais características visuais do elemento desejamos modificar.</p>
+      
+      <div class="comand_line">
+
+        <ol class="ol_comandline">
+
+          <li class="list"> h1, h2 { </li>
+
+          <li class="list"> font-family: Arial; </li>
+
+          <li class="list"> color: yellow; </li>
+
+          <li class="list">}</li>
+
+        </ol>
+
+    </div>
+
+      <figcaption>Código 2. Regra com mais de uma propriedade</figcaption>
+
+      <p class="paragrafo">Essa regra informa para o navegador que os elementos <code>h1</code> e <code>h2</code> devem ter a fonte <code>Arial</code> e a cor <code>yellow</code>.</p>
+
+      <p class="paragrafo">Note que a propriedade <code>font-family</code> recebe como valor o nome de uma fonte e que <code>color</code> recebe uma cor. Diferentes propriedades podem ter diferentes conjuntos de valores.</p>
+</section>
+
+<hr>
+
+<!--EXEMPLO BASICO-->
+
+<section class="main-section" id="exemplo">
+
+  <header><h2>Exemplo prático</h2></header>
+
+  <p class="paragrafo">Abra o seu editor preferido para criar uma <a href="https://www.devmedia.com.br/guia/html/38051" target="_blank">página HTML</a> e aplicar CSS a ela.</p>
+
+  <p class="paragrafo">No arquivo HTML insira o <b>Código 3.</b></p>
+
+  <div class="comand_line">
+
+    <ol class="ol_comandline">
+
+      <li class="list"><p class="orange">&lt!DOCTYPE html&gt</p></li>
+
+      <li class="list"><span class="red">&lthtml&gt</span></li>
+
+      <li class="list"></li>
+
+      <li class="list"><span class="red">&lthead&gt</span></li>
+
+      <li class="list"><span class="red">&lttitle&gt</span> Chapeuzinho Vermelho - Conto dos irmãos Grimm <span class="red">&lttitle&gt</span></li>
+
+      <li class="list"><span class="red">&lthead&gt</span></li>
+
+      <li class="list"></li>
+
+      <li class="list"><span class="red">&ltbody&gt</span></li>
+
+      <li class="list"><span class="red">&lth1&gt</span> Chapeuzinho Vermelho <span class="red">&lt/h1&gt</span></li>
+
+      <li class="list"></li>
+
+      <li class="list"><span class="red">&ltp></span> Houve, uma vez uma graciosa menina;</li>
+
+      <li class="list">quem a via ficava logo gostando dela,</li>
+
+      <li class="list">assim como ela gostava de todos;</li>
+
+      <li class="list">Particularmente, amava a avozinha, que não sabia o que dar e</li>
+
+      <li class="list"> o que fazer pela netinha.</li>
+
+      <li class="list">Certa vez, presenteou-a com um chapeuzinho de</li>
+
+      <li class="list">veludo vermelho e, porque lhe ficava muito bem,</li>
+
+      <li class="list"> a menina não mais quis usar outro e acabou ficando</li>
+
+      <li class="list">com o apelido de Chapeuzinho Vermelho.</li>
+
+      <li class="list">Um dia, a mãe chamou-a e disse-lhe:<span class="red">&ltp></span></li>
+
+      <li class="list"></li>
+
+      <li class="list"><span class="red">&ltblockquote></span>- Vem cá, Chapeuzinho Vermelho;</li>
+
+      <li class="list">aqui tens um pedaço de bolo e uma garrafa de vinho;</li>
+
+      <li class="list"> leva tudo para a vovó; ela está doente e fraca e</li>
+
+      <li class="list"> com isso se restabelecerá.</li>
+
+      <li class="list">Põe-te a caminho antes que o sol esquente muito e,</li>
+
+      <li class="list">quando fores, comporta-te direito; não saias do caminho,</li>
+
+      <li class="list">senão cais e quebras a garrafa e a vovó ficará sem nada.</li>
+
+      <li class="list">Quando entrares em seu quarto, não esqueças de dizer</li>
+
+      <li class="list">"bom-dia, vovó," ao invés de mexericar pelos cantos.</li>
+
+      <li class="list"><span class="red">&lt/blockquote></span></li>
+
+      <li class="list"><span class="red">&ltbody></span></li>
+
+      <li class="list"></li>
+
+      <li class="list"><span class="red">&lthtml></span></li>
+
+      
+
+
+    </ol>
+
+</div>
+
+  <figcaption><b>Código 3</b>. Conteúdo da página HTML</figcaption>
+
+  <p class="paragrafo">Assim como aprendemos anteriormente, um arquivo HTML deve ser salvo com a extensão .html. Chamaremos esse arquivo de index.html, seguindo a convenção da linguagem de nomear o arquivo principal de um site dessa forma.</p>
+
+
+  <p class="paragrafo">Agora, crie um novo arquivo e insira nele o código CSS do <b>Código 4.</b></p>
+
+
+  <div class="comand_line">
+
+    <ol class="ol_comandline">
+
+      <li class="list">h1 { </li>
+
+      <li class="list">font-family: Arial;</li>
+
+      <li class="list">color: #333; </li>
+
+      <li class="list">} </li>
+
+      <li class="list"> </li>
+
+      <li class="list"> p {</li>
+
+      <li class="list">  font-size: 14px;</li>
+
+      <li class="list"> }</li>
+
+      <li class="list"> </li>
+
+      <li class="list">blockquote { </li>
+
+      <li class="list">margin: 0; </li>
+
+      <li class="list">} </li>
+
+
+    </ol></div>
+
+
+  <figcaption><b>Código 4.</b> Regras CSS para o arquivo index.html</figcaption>
+
+  <p class="paragrafo">Um arquivo CSS deve ser salvo com a extensão .css. Chamaremos esse arquivo de stylesheet.css, seguindo a convenção de nome dessa linguagem.</p>
+
+  <p class="paragrafo">Neste arquivo criamos três regras.</p>
+
+  <ul>
+
+    <li class="li-text2">A primeira regra, que possui como seletor <code>h1</code>, informa que esse elemento deve possuir fonte <code>Arial</code> e um tom de cinza como cor. Podemos usar tanto nomes de cores quanto números hexadecimais prefixados por cerquilha <code>#</code> como valor para a propriedade <code>color</code>.</li>
+
+    <li class="li-text2">A segunda regra, que possui como seletor <code>p</code>, informa que esse elemento deve ter o tamanho da sua fonte modificado para <code>14px</code>, que quer dizer 14 pixels. A propriedade <code>fonte-size</code> deve receber um valor numérico em alguma unidade de medida reconhecida pelo CSS. Informar esse valor em pixels é muito comum.</li>
+
+    <li class="li-text2">A terceira regra, que possui como seletor <code>blockquote</code>, modifica a margem desse elemento de forma que ele perca o recuo.</li>
+
+  </ul>
+
+</section>
+
+<hr>
+
+<!--LINK-->
+
+<section class="main-section" id="link">
+
+  <header><h2>Link</h2></header>
+
+  <p class="paragrafo">Agora, devemos vincular o arquivo stylesheet.css a página index.html. Faremos isso utilizando o elemento <code>link.</code></p>
+
+  <p class="paragrafo">Abra o arquivo index.html e insira o seguinte conteúdo dentro do elemento <code>head</code>, abaixo de <code>title.</code></p>
+  
+  <div class="comand_line">
+
+    <ol class="ol_comandline">
+
+      <li class="list"><span class="orange">&lt</span>link</li>
+
+      <li class="list">rel<span class="orange">=</span><span class="green">"stylesheet"</span> href<span class="orange">=</span><span class="green">"stylesheet.css"</span><span class="orange">></span></li>
+
+    </ol>
+  
+  </div>
+
+  <figcaption><b>Código 5</b>. Utilizando o elemento link para vincular CSS e HTML</figcaption>
+
+  <p class="paragrafo">O elemento link no <b>Código 5</b> possui dois atributos, que são <code>rel</code> e <code>href</code>. Conforme aprendemos no <a href="https://www.devmedia.com.br/curso/html-fundamentos-do-html/2340" target="_blank">curso de HTML</a> 
+    os atributos de um elemento sem tag de fechamento contém informações sobre o seu conteúdo.</p>
+
+  <p class="paragrafo">A informação contida em <code>rel</code> é <code>stylesheet</code> nomeia a relação entre o recurso
+     que está sendo adicionado no documento atual. Nesse caso informamos que estamos carregando uma folha de estilo para o documento.</p>
+
+  <p class="paragrafo">O atributo <code>href</code> contém a URL para o recurso que estamos adicionando. Essa URL pode ser absoluta, como em
+     <code>https://www.site.com.br/css/stylesheet.css</code>, ou relativa, que é a forma utilizada no <b>Código 5</b>.</p>
+
+  <p class="paragrafo">Para ver o resultado desse código basta abrir o arquivo index.html no navegador.
+     A <b>Animação 2</b> mostra o momento em que o navegador aplica o CSS após a página ser atualizada.
+
+  </p>
+
+<section>
+
+  <figure class="gif">
+
+        <img src="https://www.devmedia.com.br/arquivos/Artigos/40682/2.gif" alt="#">
+
+  </figure>       
+
+</section>
+
+<figcaption><b>Animação 2</b>. CSS sendo aplicado a página</figcaption>
+
+<p class="paragrafo">Agora, se abrirmos as ferramentas do desenvolvedor veremos que além das propriedades padrão
+   dadas pelo navegador aos elementos da página também são apresentadas as propriedades que modificamos.  </p>
+
+   <p>"Pressione <b>F12</b> para abrir as ferramentas do desenvolvedor (DevTools)</p>
+
+   <hr>
+
+   <p class="paragrafo">Abaixo vemos esse resultado na <b>Animação 3</b>.</p>
+
+   <section>
+
+    <figure class="gif">
+  
+          <img src="https://www.devmedia.com.br/arquivos/Artigos/40682/3.gif" alt="#">
+  
+    </figure>       
+
+   </section>
+  
+
+   <figcaption><b>Animação 3</b>. Visualização das alterações no DevTools</figcaption>
+
+   <h1 class="conclusao">Conclusão</h1>
+
+   <p class="paragrafo">Aqui aprendemos como o CSS funciona, a sintaxe de uma regra e como adicionar CSS a um documento HTML. Seguindo a 
+    matéria CSS você poderá aprender mais sobre esses assuntos e sobre as diversas propriedades que cada elemento pode ter.</p>
+
+</section>
+
+<footer>
+
+  <p class="p-footer">Conteudo retirado do Site <a id="a-footer" href="https://www.devmedia.com.br/" target="_blank">Devmedia</a></p>
+
+   </footer>
+
+
+
+</main>    
+
+</body>
+
+</html>
