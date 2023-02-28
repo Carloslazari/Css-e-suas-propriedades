@@ -3,8 +3,13 @@
     padding: 0;
     background-color: #E6E6FA;
 }
+
+img{
+    width: 100%;
+}
+
 #navbar {
-    width: 20%;
+    width: 100%;
     border-bottom: 1px solid #4682B4;
     }
 
@@ -45,6 +50,7 @@ a{
 
 #main-doc{
   margin: 0 auto;
+  width: 100%;
 }
 
 html {
@@ -54,6 +60,7 @@ html {
 body{
     display: flex;
     flex-direction: column;
+    text-align:left;
  
 }
 
@@ -88,6 +95,9 @@ header{
     
     body{
         flex-direction: row;
+        
+        
+
     }
 
     #navbar {
@@ -280,13 +290,15 @@ footer{
 .img{
     display: flex;
     justify-content: center;
+   
+    
+}
+.img > img{
+    max-width: 400px; 
 }
 
 .gif{
     display: flex;
-    height: 600px;
 }
-
-
 
 
